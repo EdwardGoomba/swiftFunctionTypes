@@ -9,7 +9,9 @@ let ozmaAllGrades = [60, 96, 87, 42]
 // --------------------------------------
 
 //: ### Function overloads
-
+func getPassStatus(for grade: Int) -> Bool {
+	grade >= passingGrade
+}
 
 
 //: Overload using Different Number of Parameters

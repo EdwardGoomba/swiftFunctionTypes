@@ -13,6 +13,10 @@
 */
 
 // TODO: Write solution here
+func maintenanceStatus(name: String, competence: String = "terrible") -> String {
+	return "\(name) is \(competence) at his job as a maintenance technician"
+}
 
+maintenanceStatus(name: "Looser Guy from Last Night")
 
 //: [⇒ Next: 04 - Overloading](@next)
