@@ -14,7 +14,9 @@ func calculateFullName(firstName: String, lastName: String?) -> String {
 // --------------------------------------
 
 // TODO: Write solution here
-
+let calculateFullName = { (firstName: String, lastName: String?) -> String in
+	firstName + " " + (lastName ?? "")
+}
 
 /*:
  ## Challenge 2
@@ -32,7 +34,9 @@ func printResult(_ operate: Operate, _ a: Double, _ b: Double) {
 // --------------------------------------
 
 // TODO: Write solution here
-
+printResult({ (a: Double, b: Double) -> Double in
+	(a * b) - a
+}, 4.0, 5.5)
 
 
 

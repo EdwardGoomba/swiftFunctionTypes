@@ -15,25 +15,33 @@ func multiply(number: Int, by multiplier: Int) -> Int {
 }
 
 // TODO: Write solution here
+func multiply(_ number: Int, _ multiplier: Int) -> Int {
+	return number * multiplier
+}
 
+func multiply(number: Double, by multiplier: Double) -> Double {
+	return number * multiplier
+}
 /*:
  ## Challenge 2
  Eliminate the overloads below by using a default value for a parameter.
 */
 
 // --------------------------------------
-func printMultipleOf(multiplier: Int, number: Int) {
-  print("\(multiplier) * \(number)  = \(multiplier * number)")
-}
-
-func printMultipleOf(multiplier: Int) {
-  print("\(multiplier) * 1)  = \(multiplier * 1)")
-}
+//func printMultipleOf(multiplier: Int, number: Int) {
+//  print("\(multiplier) * \(number)  = \(multiplier * number)")
+//}
+//
+//func printMultipleOf(multiplier: Int = 1) {
+//  print("\(multiplier) * 1)  = \(multiplier * 1)")
+//}
 // --------------------------------------
 
 
 // TODO: Write solution here
-
+func printMultipleOf(multiplier: Int, number: Int = 1) {
+	print("\(multiplier) * \(number)  = \(multiplier * number)")
+}
 
 // --------------------------------------
 printMultipleOf(multiplier: 7)
@@ -49,12 +57,12 @@ printMultipleOf(multiplier: 11, number: 4)
 
 var score = 50
 
-func update(score: Int, withPoints points: Int) {
+func update(score: inout Int, withPoints points: Int) {
   score += points
 }
 
-update(score: score, withPoints: 100)
-score
+update(score: &score, withPoints: 100)
+
 
 
 //: [⇒ Next: 07 - Functions as Parameters](@next)

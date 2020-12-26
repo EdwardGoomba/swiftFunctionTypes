@@ -15,7 +15,19 @@ func printResult(_ operate: Operate, _ a: Int, _ b: Int) {
 // --------------------------------------
 
 
+var operate  = add
+var addClosure = { (a: Int, b: Int) -> Int in
+	a + b
+}
 
+add(a: 4, b: 5)
+operate(4, 5)
+addClosure(7, 3)
 
+printResult(add, 4, 5)
 
+printResult(
+	{ (a: Int, b: Int) -> Int in
+		(a * b) + 100
+	}, 4, 5)
 //: [⇒ Next: 03 - Challenge - Closures](@next)

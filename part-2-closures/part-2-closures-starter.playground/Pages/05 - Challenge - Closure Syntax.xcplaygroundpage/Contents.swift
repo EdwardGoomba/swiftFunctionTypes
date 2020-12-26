@@ -16,10 +16,16 @@ let copyLines = { (offense: String, repeatCount: Int) -> Void in
 }
 // --------------------------------------
 
-// TODO: Write solution here
+let copyLines_2: (String, Int) -> Void = { offense, repeatCount -> Void in
+	print( String(repeating: "I must not \(offense).", count: repeatCount) )
+}
 
+let copyLines_3: (String, Int) = { offense, repeatCount -> Void in
+	print( String(repeating: "I must not \(offense).", count: repeatCount) )
+}
 
-
-
+let copyLines_4: (String, Int) = {
+	print( String(repeating: "I must not \($0).", count: $1) )
+}
 
 //: [⇒ Next: 06 - forEach and map](@next)

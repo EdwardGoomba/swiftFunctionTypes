@@ -56,7 +56,7 @@ func getValue() -> String {
 	return "SQUAAACK"
 }
 
-let value = getValue()
+//let value = getValue()
 let intValue: Int = getValue()
 //: [⇒ Next: 05 - Advanced Parameters](@next)
 
